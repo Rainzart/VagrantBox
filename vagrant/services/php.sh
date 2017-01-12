@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 aptitude install -y php5.6 php5.6-cli php5.6-mysql
+aptitude install -y php5.6-mbstring php5.6-dom php5.6-zip
 aptitude install -y libapache2-mod-php5.6 php5.6-mcrypt
 aptitude install -y php-pear
 
