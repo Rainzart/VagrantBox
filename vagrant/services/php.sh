@@ -8,6 +8,9 @@ echo '[Installing Composer...]'
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
+echo '[Installing GIT]'
+aptitude install -y git
+
 echo '[Installing Node/npm/Gulp]'
 #curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
