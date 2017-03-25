@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-aptitude install -y php5.6 php5.6-cli php5.6-mysql
-aptitude install -y php5.6-mbstring php5.6-dom php5.6-zip
-aptitude install -y php5.6-imagick php5.6-gd
-aptitude install -y libapache2-mod-php5.6 php5.6-mcrypt
-aptitude install -y php-pear
+aptitude install -y php php-cli php-mysql php-mbstring php-dom php-zip php-imagick php-gd php-mcrypt php-pear libapache2-mod-php
+
 
 echo '[Installing Composer...]'
 curl -sS https://getcomposer.org/installer | php
@@ -21,5 +18,5 @@ aptitude install -y build-essential
 aptitude install -y npm
 aptitude install -y libnotify-bin
 
-npm install --global gulp-cli
+#npm install --global gulp-cli
 #npm install --global gulp

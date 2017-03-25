@@ -5,12 +5,18 @@ Vagrant.configure(2) do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
-
+  
+  #config.ssh.username = "ubuntu"
+  #config.ssh.password = "8241fe86a2b663288e274711"
+  
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.box = "laravel/homestead"
-  config.vm.box = "ubuntu/trusty64"
+  #config.vm.box = "ubuntu/trusty64"
   #config.vm.box = "ubuntu/xenial64"
+  #config.vm.box = "v0rtex/xenial64"
+  config.vm.box = "bento/ubuntu-16.04"
+  
 
   config.vm.hostname = "vagrants"
   # Create a forwarded port mapping which allows access to a specific port
@@ -39,7 +45,7 @@ Vagrant.configure(2) do |config|
   #
   config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
+     #vb.gui = true
   #
   #   Customize the amount of memory on the VM:
     vb.memory = "2048"
@@ -58,5 +64,5 @@ Vagrant.configure(2) do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", path: "vagrant/bootstrap.sh"
+  #config.vm.provision "shell", path: "vagrant/bootstrap.sh"
 end

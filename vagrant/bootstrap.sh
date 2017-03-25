@@ -9,7 +9,8 @@ sed -i -e 's/#precedence ::ffff:0:0\/96  100/precedence ::ffff:0:0\/96  100/g' /
  
 
 echo '[Updating Ubuntu Server]'
-add-apt-repository -y ppa:ondrej/php
+#add-apt-repository -y ppa:ondrej/php
+apt-get -y install aptitude
 aptitude -y update
 aptitude -y upgrade
 aptitude -y dist-upgrade
