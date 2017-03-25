@@ -5,5 +5,5 @@ Configuração base para uma maquina virtual Vagrant usando VirtualBox com insta
 - PHP 7.0.xx
 - MySQL 5.7.xx
 
-##Comandos adicionados:
+## Comandos adicionados:
 addvhost - Adiciona virtual hosts no apache com o padrão nome.dev
