@@ -7,7 +7,6 @@ DIR_SERVICES=$DIR"/services"
 echo '[Set IPv4 default]'
 sed -i -e 's/#precedence ::ffff:0:0\/96  100/precedence ::ffff:0:0\/96  100/g' /etc/gai.conf
  
-
 echo '[Updating Ubuntu Server]'
 #add-apt-repository -y ppa:ondrej/php
 apt-get -y install aptitude
@@ -19,8 +18,10 @@ aptitude -y install libxrender1
 aptitude -y install language-pack-pt 
 #dpkg-reconfigure locales
 #dpkg-reconfigure tzdata
+
 echo '[Installing Scripts]'
 cp $DIR/cmd/addvhost.sh /usr/local/bin/addvhost
+cp $DIR/cmd/addvhostlaravel.sh /usr/local/bin/addvhostlaravel
 
 echo '[Installing Apache]'
 bash $DIR_SERVICES"/apache.sh"
