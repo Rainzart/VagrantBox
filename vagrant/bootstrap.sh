@@ -15,6 +15,9 @@ aptitude -y update
 aptitude -y upgrade
 aptitude -y dist-upgrade
 
+aptitude -y install libxrender1 
+aptitude -y install language-pack-pt 
+#dpkg-reconfigure locales
 echo '[Installing Scripts]'
 cp $DIR/cmd/addvhost.sh /usr/local/bin/addvhost
 
