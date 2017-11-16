@@ -7,3 +7,4 @@ Configuração base para uma maquina virtual Vagrant usando VirtualBox com insta
 
 ## Comandos adicionados:
 addvhost - Adiciona virtual hosts no apache com o padrão nome.dev
+addvhostlaravel - Adiciona virtual hosts no apache com o padrão nome.dev e com direótio /public no final
