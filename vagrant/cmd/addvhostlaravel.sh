@@ -10,19 +10,19 @@ DIR_APACHE_AVAILABLE=$DIR_APACHE"/sites-available"
 FILE=${1} 
 HOSTS_FILE="/etc/hosts"
 
-if [ -f $DIR_APACHE_ENABLE/$FILE.dev.conf ]; then
-	echo "O vhost $FILE j? existe!"
+if [ -f $DIR_APACHE_ENABLE/$FILE.local.conf ]; then
+	echo "O vhost $FILE já existe!"
     exit
 fi
 
 VHOST=$(cat <<EOF
 <VirtualHost *:80> 
-    ServerName $FILE.dev
+    ServerName $FILE.local
     DocumentRoot "/var/www/$FILE/public"
         
     # This should be omitted in the production environment
     SetEnv APPLICATION_ENV development
-    ErrorLog /var/log/apache2/error-$FILE.log
+    ErrorLog /var/log/apache2/$FILE-error.log
     LogLevel warn
 	
     #Alias /docs /var/www/$FILE/docs
@@ -43,11 +43,11 @@ VHOST=$(cat <<EOF
 EOF
 )
 
-echo "${VHOST}" > $DIR_APACHE_AVAILABLE/$FILE.dev.conf
-ln -sf $DIR_APACHE_AVAILABLE/$FILE.dev.conf $DIR_APACHE_ENABLE/$FILE.dev.conf
+echo "${VHOST}" > $DIR_APACHE_AVAILABLE/$FILE.local.conf
+ln -sf $DIR_APACHE_AVAILABLE/$FILE.local.conf $DIR_APACHE_ENABLE/$FILE.local.conf
 
 HOSTS=$(cat <<EOF
-127.0.0.1   $FILE.dev
+127.0.0.1   $FILE.local
 EOF
 )
 echo "${HOSTS}" >> $HOSTS_FILE

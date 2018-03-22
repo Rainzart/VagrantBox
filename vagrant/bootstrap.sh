@@ -13,8 +13,8 @@ aptitude -y update
 aptitude -y upgrade
 aptitude -y dist-upgrade
 
-aptitude -y install libxrender1 
-aptitude -y install language-pack-pt 
+aptitude -y install libxrender1
+aptitude -y install language-pack-pt
 #dpkg-reconfigure locales
 #dpkg-reconfigure tzdata
 timedatectl set-timezone America/Sao_Paulo
