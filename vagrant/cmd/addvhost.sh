@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 echo "Criando vhost ${1}..."
 
 DIR_ATUAL=$(pwd)

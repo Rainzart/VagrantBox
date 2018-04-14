@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-aptitude install -y php php-cli php-mysql php-mbstring php-dom php-zip php-imagick php-gd php-mcrypt php-pear php-soap libapache2-mod-php
+apt update
+aptitude install -y php7.2 php7.2-cli php7.2-mysql php7.2-mbstring php7.2-dom php7.2-zip php7.2-gd php7.2-soap
+aptitude install -y php-imagick php-mcrypt php-pear
 
 
 echo '[Installing Composer...]'
