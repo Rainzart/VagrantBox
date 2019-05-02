@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 
 DIR_SERVICES=${1} 
@@ -6,7 +7,7 @@ debconf-set-selections <<< 'mysql-server mysql-server/root_password password roo
 debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 
 echo '[Install MySQL]'
-aptitude install -y mysql-server libapache2-mod-auth-mysql
+aptitude install -y mysql-server
 
 echo '[Enabling access remote MySQL]'
 sed -i -e 's/bind-address/#bind-address/g' /etc/mysql/mysql.conf.d/mysqld.cnf
